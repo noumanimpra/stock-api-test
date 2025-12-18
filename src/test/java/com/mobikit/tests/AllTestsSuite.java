@@ -19,7 +19,8 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses({
         StockItemGetTest.class,
         StockItemPostTest.class,
-        StockItemPutTest.class
+        StockItemPutTest.class,
+        StockItemDeleteTest.class
 })
 public class AllTestsSuite {
     // Bu sınıf boş kalır - sadece anotasyonlar çalışır
