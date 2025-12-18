@@ -87,7 +87,7 @@ mvn clean install
 
 ---
 
-## ▶️ Testleri Çalıştırma
+## Testleri Çalıştırma
 
 ### Tüm Testleri Çalıştırma
 
