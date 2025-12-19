@@ -28,6 +28,7 @@ public class StockItemDeleteTest extends BaseTest {
                     .post(getItemsEndpoint())
                     .then()
                     .statusCode(201)
+                    .time(lessThan(getMaxResponseTime()))  // ✅ Response time eklendi
                     .extract()
                     .path("id");
 
@@ -38,7 +39,8 @@ public class StockItemDeleteTest extends BaseTest {
                     .when()
                     .delete(getItemEndpoint(id))
                     .then()
-                    .statusCode(200);
+                    .statusCode(200)
+                    .time(lessThan(getMaxResponseTime()));  // ✅ Response time eklendi
 
             deletedCount++;
             System.out.println("  ✓ Ürün " + i + " silindi");

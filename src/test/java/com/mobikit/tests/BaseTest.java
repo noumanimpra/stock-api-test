@@ -20,12 +20,12 @@ public class BaseTest {
                 .ignoreIfMissing()  // Dosya yoksa hata verme
                 .load();
 
-        // Environment variable'ları oku
+        // Environment variable read
         baseUri = dotenv.get("BASE_URI", "https://694440897dd335f4c35fce43.mockapi.io");
         itemsEndpoint = dotenv.get("ITEMS_ENDPOINT", "/items");
         maxResponseTime = Long.parseLong(dotenv.get("MAX_RESPONSE_TIME", "3000"));
 
-        // Rest Assured'ı yapılandır
+        // Rest Assured'ı yapılandırma
         RestAssured.baseURI = baseUri;
 
         // Test başlangıç bilgisi
